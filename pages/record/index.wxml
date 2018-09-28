@@ -1,0 +1,70 @@
+<wux-dialog id="wux-dialog" />
+<view class="page">
+  <view class="page__bd">
+    <view class='search-bar'>
+      <view class="weui-flex">
+        <view class="weui-flex__item">
+          <picker bindchange="bingCycleChange" value="{{cycleIndex}}" range="{{cycleItem}}" range-key="BillName">
+            <view class="picker">
+              {{cycleItem[cycleIndex].BillName}}
+            </view>
+            <image style='height:4px;width:8px' src='/assets/images/breadcrumbNav_arrow_open.png'></image>
+          </picker>
+        </view>
+        <view class="weui-flex__item">
+          <picker bindchange="bindCategoryChange" value="{{categoryIndex}}" range="{{categoryItem}}">
+            <view class="picker">
+              {{categoryItem[categoryIndex]}}
+            </view>
+            <image style='height:4px;width:8px' src='/assets/images/breadcrumbNav_arrow_open.png'></image>
+          </picker>
+        </view>
+        <view class="weui-flex__item">
+          <picker bindchange="bindModeChange" value="{{modeIndex}}" range="{{modeItem}}">
+            <view class="picker">
+              {{modeItem[modeIndex]}}
+            </view>
+            <image style='height:4px;width:8px' src='/assets/images/breadcrumbNav_arrow_open.png'></image>
+          </picker>
+        </view>
+      </view>
+    </view>
+    <scroll-view scroll-y class='recordlist' style="height:{{scrollHeight}}px;">
+      <wux-refresher id="wux-refresher" bind:refresh="onRecordRefresh">
+        <view class="weui-form-preview" wx:for="{{ billItem }}" wx:key="key">
+          <view class="weui-form-preview__hd">
+            <view class="weui-form-preview__item">
+              <view class="weui-form-preview__label">{{item.RecordDate}}</view>
+              <view class="preview_delete right" data-Id="{{item.Id}}" bindtap="bindDelete">
+                <image src='/assets/images/ic_delete.png' style=''></image>
+              </view>
+              <view class="preview_price right">¥{{item.Price}}
+              </view>
+            </view>
+          </view>
+          <view class="weui-form-preview__bd">
+            <view class="weui-form-preview__item">
+              <view class="weui-form-preview__label">周期</view>
+              <view class="weui-form-preview__value">{{item.BillName}}</view>
+            </view>
+            <view class="weui-form-preview__item">
+              <view class="weui-form-preview__label">明细</view>
+              <view class="weui-form-preview__value">{{item.Detailed}}</view>
+            </view>
+            <view class="weui-form-preview__item">
+              <view class="weui-form-preview__label">类别</view>
+              <view class="weui-form-preview__value">{{item.Category}}</view>
+            </view>
+            <view class="weui-form-preview__item">
+              <view class="weui-form-preview__label">方式</view>
+              <view class="weui-form-preview__value">{{item.Mode}}</view>
+            </view>
+          </view>
+        </view>
+      </wux-refresher>
+    </scroll-view>
+    <view class='footer-bar'>
+      <view class='sumprice'>总计：￥{{sumPrice}}</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,41 @@
+@import '/assets/styles/recordlist.wxss';
+.search-bar {
+  height: 80rpx;
+  background: #fff;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.search-bar .weui-flex__item {
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+
+.weui-flex__item picker .picker {
+  float: left;
+  margin-left: 50rpx;
+}
+
+.weui-form-preview {
+  margin-top: 10rpx;
+}
+
+.weui-form-preview__hd {
+  padding: 2px 15px;
+}
+
+.footer-bar {
+  padding: 0 15px;
+  height: 80rpx;
+  background: #fff;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  
+}
+
+.sumprice {
+  line-height: 80rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+  float: right;
+}

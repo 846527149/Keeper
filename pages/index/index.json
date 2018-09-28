@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "Keeper生活记录",
+  "usingComponents": {
+    "wux-dialog": "../../dist/dialog/index"
+    
+  }
+}

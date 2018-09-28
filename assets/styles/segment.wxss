@@ -1,0 +1,19 @@
+.order_segment {
+  height: 80rpx;
+  background: #e83632;
+  padding-top: 30rpx;
+}
+
+.wux-segment {
+  height: 60rpx;
+}
+
+.wux-segment--assertive .wux-segment-item {
+  color: #fff !important;
+  border-color: #fff !important;
+}
+
+.wux-segment--assertive .wux-segment-item--current {
+  background: #fff !important;
+  color: #e83632 !important;
+}

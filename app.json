@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/record/index",
+    "pages/setting/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#e83632",
+    "navigationBarTitleText": "Keeper生活记录",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "color": "#6e6d6b",
+    "selectedColor": "#e64340",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "box-shadow": "0 0 6px 0",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "assets/images/ic_tab_home_normal.png",
+        "selectedIconPath": "assets/images/ic_tab_home_selected.png",
+        "text": "记录"
+      },
+      {
+        "pagePath": "pages/record/index",
+        "iconPath": "assets/images/ic_tab_manager_normal.png",
+        "selectedIconPath": "assets/images/ic_tab_manager_selected.png",
+        "text": "历史"
+      }
+    ]
+  }
+}

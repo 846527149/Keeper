@@ -1,0 +1,6 @@
+@import '/assets/styles/recordlist.wxss';
+
+.weui-toptips_alert {
+  background-color: #ffbe00;
+}
+

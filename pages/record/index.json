@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "Keeper历史记录",
+  "usingComponents": {
+    "wux-refresher": "../../dist/refresher/index",
+    "wux-dialog": "../../dist/dialog/index"
+  }
+}

@@ -1,0 +1,26 @@
+.page__bd {
+  padding-bottom: 0px;
+}
+
+.weui-form-preview__hd {
+  padding: 5px 15px;
+}
+.preview_delete {
+  width: 60rpx;
+  vertical-align: middle;
+  text-align: center;
+  display: table-cell;
+}
+
+.preview_delete image {
+  height: 35rpx;
+  width: 35rpx;
+  margin-top: 18rpx;
+}
+
+.preview_price {
+  font-size: 38rpx;
+  color: #CC6633;
+  font-weight: bold;
+}
+

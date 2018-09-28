@@ -1,0 +1,116 @@
+<wux-dialog id="wux-dialog" />
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-toptips weui-toptips_alert" wx:if="{{showTopTips}}">{{showTopMessage}}</view>
+    <form class="index-add" bindsubmit="onSubmit">
+      <view class="weui-cells__title">填写消费记录</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell ">
+          <view class="weui-cell__hd">
+            <view class="weui-label">周期</view>
+          </view>
+          <view class="weui-cell__bd">
+            <picker bindchange="bindCycleChange" value="{{cycleIndex}}" range="{{cycleItem}}" range-key='BillName'>
+              <view class="picker">
+                {{cycleItem[cycleIndex].BillName}}
+              </view>
+            </picker>
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">金额</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" placeholder="请输入金额" type="digit" name="price" step="0.01" value='{{price}}' />
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">明细</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" placeholder="请输入明细" name="detailed" value='{{detailed}}' />
+          </view>
+        </view>
+        <view class="weui-cell ">
+          <view class="weui-cell__hd">
+            <view class="weui-label">分类</view>
+          </view>
+          <view class="weui-cell__bd">
+            <picker bindchange="bindCategoryChange" value="{{categoryIndex}}" range="{{categoryItem}}">
+              <view class="picker">
+                {{categoryItem[categoryIndex]}}
+              </view>
+            </picker>
+          </view>
+        </view>
+        <view class="weui-cell ">
+          <view class="weui-cell__hd">
+            <view class="weui-label">方式</view>
+          </view>
+          <view class="weui-cell__bd">
+            <picker bindchange="bindModeChange" value="{{modeIndex}}" range="{{modeItem}}">
+              <view class="picker">
+                {{modeItem[modeIndex]}}
+              </view>
+            </picker>
+          </view>
+        </view>
+        <view class="weui-cell ">
+          <view class="weui-cell__hd">
+            <view class="weui-label">时间</view>
+          </view>
+          <view class="weui-cell__bd">
+            <picker mode="date" value="{{nowDate}}" start="2018-01-01" end="{{endDate}}" bindchange="bindDateChange">
+              <view class="picker">
+                {{nowDate}}
+              </view>
+            </picker>
+          </view>
+        </view>
+      </view>
+      <view class="weui-btn-area">
+        <button class="weui-btn" type="warn" formType="submit">新增记录</button>
+      </view>
+    </form>
+    <view class='recordlist'>
+      <view class="weui-cells__title">历史新增</view>
+      <view class='recordcontent'>
+        <view class="weui-form-preview" wx:for="{{ billItem }}" wx:key="key">
+          <view class="weui-form-preview__hd">
+            <view class="weui-form-preview__item">
+              <view class="weui-form-preview__label">
+                {{item.RecordDate}}</view>
+              <view class="preview_delete right" data-Id="{{item.Id}}" bindtap="bindDelete">
+                <image src='/assets/images/ic_delete.png' style=''></image>
+              </view>
+              <view class="preview_price right">¥{{item.Price}}
+              </view>
+
+            </view>
+          </view>
+          <view class="weui-form-preview__bd">
+            <view class="weui-form-preview__item">
+              <view class="weui-form-preview__label">周期</view>
+              <view class="weui-form-preview__value">{{item.BillName}}</view>
+            </view>
+            <view class="weui-form-preview__item">
+              <view class="weui-form-preview__label">明细</view>
+              <view class="weui-form-preview__value">{{item.Detailed}}</view>
+            </view>
+            <view class="weui-form-preview__item">
+              <view class="weui-form-preview__label">类别</view>
+              <view class="weui-form-preview__value">{{item.Category}}</view>
+            </view>
+            <view class="weui-form-preview__item">
+              <view class="weui-form-preview__label">方式</view>
+              <view class="weui-form-preview__value">{{item.Mode}}</view>
+            </view>
+          </view>
+        </view>
+
+      </view>
+    </view>
+  </view>
+</view>
