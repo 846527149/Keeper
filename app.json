@@ -32,8 +32,8 @@
       },
       {
         "pagePath": "pages/charts/index",
-        "iconPath": "assets/images/ic_tab_manager_normal.png",
-        "selectedIconPath": "assets/images/ic_tab_manager_selected.png",
+        "iconPath": "assets/images/iconfont-list.png",
+        "selectedIconPath": "assets/images/iconfont-list-active.png",
         "text": "统计"
       }
     ]
