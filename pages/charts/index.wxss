@@ -1,0 +1,13 @@
+.search-bar {
+  height: 80rpx;
+  background: #fff;
+  border-bottom: 1px solid #e8e8e8;
+  border-top: 1px solid #e8e8e8;
+  margin-bottom: 10rpx;
+}
+
+.search-bar .weui-flex__item {
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+}

@@ -1,0 +1,33 @@
+<wux-dialog id="wux-dialog" />
+<view class="page">
+  <view class="page__bd">
+    <view>
+      <!--周期饼状图-->
+      <view class='search-bar'>
+        <view class="weui-flex">
+          <view class="weui-flex__item">
+            <picker bindchange="bingCycleChange" value="{{cycleIndex}}" range="{{cycleItem}}" range-key="BillName">
+              <view class="picker">
+                {{cycleItem[cycleIndex].BillName}}
+                <image style='height:4px;width:8px' src='/assets/images/breadcrumbNav_arrow_open.png'></image>
+              </view>
+            </picker>
+          </view>
+        </view>
+      </view>
+      <canvas canvas-id="pieCanvas" class="canvas" style="height:600rpx;width:100%"></canvas>
+    </view>
+    <view>
+      <!--最近6个月趋势图-->
+      <view class='search-bar'>
+        <view class="weui-flex">
+          <view class="weui-flex__item">
+            最近6个月消费趋势图
+          </view>
+        </view>
+      </view>
+      <canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas" style="height:600rpx;width:100%" ></canvas>
+    </view>
+  </view>
+
+</view>

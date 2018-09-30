@@ -9,7 +9,9 @@ class HttpService extends WxRequest {
       createbill       :"Create/CreateBill",
       billpaged        :'Paged/BillPagedList',
       billindexpaged   :'Paged/BillIndexPagedList',
-      deletebill       :"Delete/DeleteBill"
+      deletebill       :"Delete/DeleteBill",
+      piechartlist     :"List/PieChartsList",
+      linechartlist    :"List/LineChartsList"
     }
     this.interceptors.use({
       request(request) {
@@ -71,6 +73,16 @@ class HttpService extends WxRequest {
   getPagedBillList(params) {
     return this.getRequest(this.$$path.billpaged, {
       data: params,
+    })
+  }
+  /**最近6月趋势图 */
+  getLineChartsList() {
+    return this.getRequest(this.$$path.linechartlist, null)
+  }
+  /**获取周期分类图标数据 */
+  getPieChartsList(cycle) {
+    return this.getRequest(this.$$path.piechartlist, {
+      data:{Cycle:cycle}
     })
   }
   /**首页记录列表分页 */

@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/record/index",
-    "pages/setting/index"
+    "pages/setting/index",
+    "pages/charts/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -28,6 +29,12 @@
         "iconPath": "assets/images/ic_tab_manager_normal.png",
         "selectedIconPath": "assets/images/ic_tab_manager_selected.png",
         "text": "历史"
+      },
+      {
+        "pagePath": "pages/charts/index",
+        "iconPath": "assets/images/ic_tab_manager_normal.png",
+        "selectedIconPath": "assets/images/ic_tab_manager_selected.png",
+        "text": "统计"
       }
     ]
   }
